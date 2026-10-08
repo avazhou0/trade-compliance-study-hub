@@ -13,10 +13,12 @@
   header h1 { margin:0 0 6px; font-size:1.6rem; }
   header p { margin:4px 0; opacity:.85; }
   nav { position:sticky; top:0; background:#fff; border-bottom:1px solid var(--line);
-         padding:10px; display:flex; gap:8px; overflow-x:auto; z-index:10; }
+         padding:10px 12px; display:flex; gap:10px; align-items:center; z-index:10; }
   .chip { flex:0 0 auto; text-decoration:none; color:var(--accent); border:1px solid var(--accent);
           border-radius:999px; padding:6px 14px; font-size:.9rem; font-weight:600; }
   .chip:hover { background:var(--accent); color:#fff; }
+  select.jump { flex:1 1 auto; min-width:0; font-size:.95rem; font-weight:600; color:var(--ink);
+          border:1px solid var(--accent); border-radius:999px; padding:8px 12px; background:#fff; }
   main { max-width:760px; margin:0 auto; padding:20px 16px 60px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px;
           padding:22px 22px 18px; margin:22px 0; box-shadow:0 2px 8px rgba(0,0,0,.04); }
@@ -50,7 +52,7 @@
   <p>One lesson every other day · read, listen, test yourself</p>
   <p>14 lessons in this file</p>
 </header>
-<nav><a class="chip" href="playbooks/early-stage-trade-checklist.html">📋 Playbooks</a><a class="chip" href="#lesson-1">Lesson 1</a><a class="chip" href="#lesson-2">Lesson 2</a><a class="chip" href="#lesson-3">Lesson 3</a><a class="chip" href="#lesson-4">Lesson 4</a><a class="chip" href="#lesson-5">Lesson 5</a><a class="chip" href="#lesson-6">Lesson 6</a><a class="chip" href="#lesson-7">Lesson 7</a><a class="chip" href="#lesson-8">Lesson 8</a><a class="chip" href="#lesson-9">Lesson 9</a><a class="chip" href="#lesson-10">Lesson 10</a><a class="chip" href="#lesson-11">Lesson 11</a><a class="chip" href="#lesson-12">Lesson 12</a><a class="chip" href="#lesson-13">Lesson 13</a><a class="chip" href="#lesson-14">Lesson 14</a></nav>
+<nav><a class="chip" href="playbooks/early-stage-trade-checklist.html">📋 Playbooks</a><select class="jump" onchange="if(this.value){location.href=this.value;}this.selectedIndex=0;"><option value="">Jump to a lesson…</option><option value="#lesson-1">Lesson 1 — How every import duty is calculated — classification × valuation × origin</option><option value="#lesson-2">Lesson 2 — Reading a tariff code — HTS chapters, headings, subheadings</option><option value="#lesson-3">Lesson 3 — The General Rules of Interpretation (GRIs) in practice</option><option value="#lesson-4">Lesson 4 — Binding rulings (CROSS) — getting certainty on classification</option><option value="#lesson-5">Lesson 5 — Customs valuation I — transaction value</option><option value="#lesson-6">Lesson 6 — Customs valuation II — assists, related-party pricing, adjustments</option><option value="#lesson-7">Lesson 7 — Country of origin and marking requirements</option><option value="#lesson-8">Lesson 8 — Duty-savings programs: foreign trade zones (FTZs)</option><option value="#lesson-9">Lesson 9 — Duty-savings programs: drawback</option><option value="#lesson-10">Lesson 10 — Trade remedy duties — Section 232, Section 301, and IEEPA tariffs</option><option value="#lesson-11">Lesson 11 — Reasonable care and informed compliance: the importer&#x27;s legal duty</option><option value="#lesson-12">Lesson 12 — CBP audits, CF-28/CF-29, and prior disclosure</option><option value="#lesson-13">Lesson 13 — What FTAs do — preferential duty rates in one picture</option><option value="#lesson-14">Lesson 14 — USMCA — key features for tech supply chains</option></select></nav>
 <main>
 <article class="card" id="lesson-1">
 <div class="day-head"><span class="day-num">Lesson 1</span><span class="day-date">2026-09-23</span></div>
