@@ -28,6 +28,9 @@
   .day-date { color:#888; font-size:.9rem; }
   .card h2 { margin:12px 0 4px; font-size:1.3rem; }
   .card h3 { color:var(--accent); margin:20px 0 6px; font-size:1.05rem; }
+  .audio { background:#f3ede3; border-radius:10px; padding:12px 14px; margin:14px 0 4px; }
+  .audio-label { font-weight:600; margin-bottom:8px; font-size:.95rem; }
+  audio { width:100%; }
   details.answers { background:#f7f3ec; border:1px dashed var(--accent); border-radius:10px;
                     padding:12px 14px; margin-top:18px; }
   details.answers summary { cursor:pointer; font-weight:700; color:var(--accent); }
@@ -54,6 +57,7 @@
 <article class="card" id="lesson-T1">
 <div class="day-head"><span class="day-num">Lesson T1</span><span class="day-date">2026-10-30</span></div>
 <h2>The trade tech stack, mapped</h2>
+<div class="audio"><div class="audio-label">🎧 Trade Talk: The Stack Behind Every Shipment</div><audio controls preload="none" src="audio/tech1.mp3"></audio></div>
 <h3>The idea</h3>
 <p>No single system &quot;does trade compliance.&quot; A stack of layers does, and each layer has one job. (1) <em>Systems of record</em> — the ERP (orders, shipments, invoices) and the PLM (product designs, bills of material) hold the raw facts: what the product is, who is buying it, where it is going. (2) <em>Global trade management (GTM) platforms</em> — products such as SAP GTS, Oracle GTM, Thomson Reuters ONESOURCE Global Trade, Descartes, and e2open — hold the determinations: classification, license decisions, FTA qualification, duty calculation. (3) <em>Screening engines</em> check every party on a transaction — customer, supplier, consignee, bank, carrier — against government restricted-party lists. (4) <em>Regulatory content services</em> keep the raw material current: tariff schedules, ECCN lists, sanctions lists, and rule changes, which update constantly. (5) <em>Filing connections</em> — EDI or API links to brokers and to customs systems — move the approved data out as declarations. (6) <em>Document and analytics layers</em> store the proof and surface the metrics.</p>
 <p>Follow one export order through the stack: the ERP creates the order; the screening engine checks the parties; the GTM platform confirms the product&#x27;s ECCN and determines whether a license is needed for that destination and end-user; documents are generated from the same data; the filing layer transmits; the document layer archives everything for the five-year recordkeeping clock.</p>
@@ -69,6 +73,7 @@
 <article class="card" id="lesson-T2">
 <div class="day-head"><span class="day-num">Lesson T2</span><span class="day-date">2026-10-30</span></div>
 <h2>Automation that actually works</h2>
+<div class="audio"><div class="audio-label">🎧 Trade Talk: Automate the Routine, Escalate the Rest</div><audio controls preload="none" src="audio/tech2.mp3"></audio></div>
 <h3>The idea</h3>
 <p>Automation is excellent at trade tasks that are <em>structured and repeatable</em>: screening parties against lists, determining whether a license is required from an ECCN + destination + end-user, checking FTA qualification against origin data, generating standard documents, preparing entry data for the broker. Given clean inputs, a rule engine makes the same correct decision ten thousand times without fatigue — that&#x27;s the win: consistency, speed, and an automatic audit trail.</p>
 <p>Automation is dangerous exactly where its inputs are ambiguous. A vague product description (&quot;module, electronic&quot;) automated into a classification workflow doesn&#x27;t produce a thoughtful decision — it produces a confident wrong answer at scale. Trade professionals call this the <em>blast radius</em> problem: a manual error affects one shipment; an automated error affects every shipment until someone notices. An automated FTA claim built on one wrong origin field can run for a year and turn into a six-figure repayment plus a prior disclosure.</p>
@@ -85,6 +90,7 @@
 <article class="card" id="lesson-T3">
 <div class="day-head"><span class="day-num">Lesson T3</span><span class="day-date">2026-10-30</span></div>
 <h2>AI for classification and screening</h2>
+<div class="audio"><div class="audio-label">🎧 Trade Talk: AI Drafts, Humans Decide</div><audio controls preload="none" src="audio/tech3.mp3"></audio></div>
 <h3>The idea</h3>
 <p>AI — including large-language-model agents — is genuinely good at a specific slice of trade work: reading messy product descriptions and datasheets, drafting an HTS or ECCN classification with reasoning, finding the rulings and chapter notes that bear on it, summarizing a regulation change, and triaging screening results (most name matches are false positives, and sorting the obvious ones is tireless, repetitive work). Used this way, AI is a fast first drafter and a tireless first filter.</p>
 <p>What AI cannot be is <em>accountable</em>. The importer&#x27;s duty of reasonable care and the exporter&#x27;s license liability belong to the company and its people, and &quot;the model said so&quot; is not a defense — worse, an LLM can produce a plausible, well-formatted, completely wrong code with total confidence (a hallucination), or reason from outdated rules it absorbed in training. An unaudited AI classification doesn&#x27;t stay wrong once; like any automation, it gets reused on every future shipment of that product.</p>
@@ -101,6 +107,7 @@
 <article class="card" id="lesson-T4">
 <div class="day-head"><span class="day-num">Lesson T4</span><span class="day-date">2026-10-30</span></div>
 <h2>Data as a control</h2>
+<div class="audio"><div class="audio-label">🎧 Trade Talk: Bad Data, Bad Decisions</div><audio controls preload="none" src="audio/tech4.mp3"></audio></div>
 <h3>The idea</h3>
 <p>Every determination in the tech stack — classification, screening, license, FTA claim, duty — is computed from data, mostly the <em>product master</em>: the company&#x27;s record for each item. The trade-critical fields are a short list: accurate product description, HTS code, ECCN, country of origin, value components (price, assists, royalties), end-use notes, license information, supplier and factory identity, and the bill of materials (BOM) behind origin and classification calls. If those fields are right, even modest systems perform well. If they&#x27;re wrong, the most expensive GTM platform in the world just automates falsehoods with excellent uptime.</p>
 <p>So treat data quality as what it legally is: a <em>control</em>. In audit after audit, the root cause is rarely a misread regulation — it&#x27;s a field nobody owned. An engineer swaps a key component (classification and ECCN may change) and no trigger tells trade. A factory quietly adds a second plant in another country (origin changes; FTA claims and remedy-duty exposure change with it) and procurement updates the PO but not the master. A supplier changes its legal name and screening silently stops matching.</p>
@@ -117,6 +124,7 @@
 <article class="card" id="lesson-T5">
 <div class="day-head"><span class="day-num">Lesson T5</span><span class="day-date">2026-10-30</span></div>
 <h2>Dashboards and continuous monitoring</h2>
+<div class="audio"><div class="audio-label">🎧 Trade Talk: Catch It While You Can Fix It</div><audio controls preload="none" src="audio/tech5.mp3"></audio></div>
 <h3>The idea</h3>
 <p>Traditional compliance testing is periodic: once a year, someone samples last year&#x27;s transactions and finds last year&#x27;s problems — after the goods have moved, the duties were paid (or not), and the disclosure clock has been running. <em>Continuous monitoring</em> flips that: the systems watch live operations and surface exceptions while they can still be fixed — a shipment about to go to a newly listed party, a license about to expire with orders still queued against it, a classification backlog growing faster than the team clears it.</p>
 <p>A useful trade dashboard watches a handful of things, grouped by the question they answer:</p>
@@ -134,6 +142,7 @@
 <article class="card" id="lesson-T6">
 <div class="day-head"><span class="day-num">Lesson T6</span><span class="day-date">2026-10-30</span></div>
 <h2>Selecting and landing a trade tech solution</h2>
+<div class="audio"><div class="audio-label">🎧 Trade Talk: Buying Trade Tech Without Buying Trouble</div><audio controls preload="none" src="audio/tech6.mp3"></audio></div>
 <h3>The idea</h3>
 <p>Trade technology projects rarely fail on features. They fail on fit (the tool solved a problem the company didn&#x27;t quite have) and on adoption (the business kept using spreadsheets around it). The sequence that works runs in a specific order — and the software selection is step three, not step one.</p>
 <p><em>Step 1 — Define the problem in business terms.</em> Not &quot;we need a GTM platform,&quot; but: screening takes two days per order and delays shipments; classification backlog is six weeks; we overpaid an estimated amount in unclaimed FTA preference; an audit finding says our license checks are manual. Each problem gets a measurable stake: risk reduced, cost avoided, cycle time cut.</p>
